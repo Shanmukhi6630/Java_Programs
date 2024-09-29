@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class Pangram
 {
     public static void main(String s[]) 
@@ -17,18 +14,13 @@ public class Pangram
     }
     public static boolean isPangram(String sentence) 
     {
-        Set<Character> alphabet = new HashSet<>();
         for (char c = 'a'; c <= 'z'; c++) 
         {
-            alphabet.add(c);
-        }
-        for (char c : sentence.toLowerCase().toCharArray()) 
-        {
-            if (c >= 'a' && c <= 'z') 
+            if (!sentence.toLowerCase().contains(String.valueOf(c))) 
             {
-                alphabet.remove(c);
+                return false;
             }
         }
-        return alphabet.isEmpty();
+        return true;
     }
 }
