@@ -31,7 +31,7 @@ public class SavingsAccount
 
 public class AccountSavings 
 {
-    public static void main(String[] args) 
+    public static void main(String s[]) 
     {
         SavingsAccount.modifyInterestRate(0.04);
         SavingsAccount account1 = new SavingsAccount(1000.00);
